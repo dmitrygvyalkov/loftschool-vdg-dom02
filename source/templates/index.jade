@@ -6,3 +6,20 @@ block title
 
 block main-menu
     +main-menu("#mobile")
+
+block breadcrumbs
+    -
+        var path =  [
+                        {
+                            url: "/",
+                            text: "Главная"
+                        },
+                        {
+                            url: "#",
+                            text: "Каталог"
+                        }
+                    ];
+    +breadcrumbs(path)
+
+block page-title
+    Мобильные телефоны

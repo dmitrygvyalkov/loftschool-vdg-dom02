@@ -42,11 +42,11 @@ mixin main-menu(activeUrl)
 
 
     ul.main-menu
-    each menuItem, index in mainMenu
-        li.main-menu__element
-            if menuItem.link == activeUrl    
-                a.main-menu__link_active(href="#{menuItem.link}" title="#{menuItem.title}").
-                    #{menuItem.text}
-            else
-                a.main-menu__link(href="#{menuItem.link}" title="#{menuItem.title}").
-                    #{menuItem.text}
+        each menuItem, index in mainMenu
+            li.main-menu__element
+                if menuItem.link == activeUrl    
+                    a.main-menu__link_active(href="#{menuItem.link}" title="#{menuItem.title}").
+                        #{menuItem.text}
+                else
+                    a.main-menu__link(href="#{menuItem.link}" title="#{menuItem.title}").
+                        #{menuItem.text}

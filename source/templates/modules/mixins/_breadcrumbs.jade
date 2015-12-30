@@ -1,0 +1,12 @@
+mixin breadcrumbs(path)
+    
+    ul.breadcrumbs
+        each breadcrumbsElement, key in path
+            if key == 0
+                li.breadcrumbs__element_first
+                    a.breadcrumbs_link(href="#{breadcrumbsElement.url}").
+                        #{breadcrumbsElement.text}
+            else
+                li.breadcrumbs__element
+                    a.breadcrumbs_link(href="#{breadcrumbsElement.url}").
+                        #{breadcrumbsElement.text}
