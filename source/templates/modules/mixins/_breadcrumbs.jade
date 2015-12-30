@@ -2,11 +2,7 @@ mixin breadcrumbs(path)
     
     ul.breadcrumbs
         each breadcrumbsElement, key in path
-            if key == 0
-                li.breadcrumbs__element_first
-                    a.breadcrumbs_link(href="#{breadcrumbsElement.url}").
-                        #{breadcrumbsElement.text}
-            else
-                li.breadcrumbs__element
-                    a.breadcrumbs_link(href="#{breadcrumbsElement.url}").
+            li(class=key ? "breadcrumbs_element" : "breadcrumbs_element--first")
+                a.breadcrumbs_link(href="#{breadcrumbsElement.url}").
+                    span.breadcrumbs_text
                         #{breadcrumbsElement.text}
