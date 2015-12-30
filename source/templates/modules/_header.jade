@@ -1,0 +1,45 @@
+header.header
+    .header-top-line
+        .header-top-line__cell_socials-wrapper
+            ul.socials
+                li.socials__icon-wrapper
+                    a(href="#" title="Facebook")
+                        i.ico.socials__icon_facebook.
+                            Facebook
+                li.socials__icon-wrapper
+                    a(href="#" title="вКонтакте")
+                        i.ico.socials__icon_vkontakte.
+                            вКонтакте
+                li.socials__icon-wrapper
+                    a(href="#" title="Twitter")
+                        i.ico.socials__icon_twitter.
+                            Twitter
+        .header-top-line__cell_address-wrapper
+            .address.
+                ул. Маяковская 6, офис 17
+        .header-top-line__cell_contacts-wrapper
+            .contacts
+                .contacts__phone.
+                    +7 921 123-12-13
+    .header-bottom-line
+        .header-bottom-line__cell_logo-wrapper
+            .logo
+                a(href="/")
+                    img(src="assets/images/logo.png" alt="Cooltech")
+        .header-bottom-line__cell_search-wrapper
+            .header-search
+                form(action="#" method="get")
+                    input.header-search__query-input(type="text" placeholder="Что будем искать" name="q")
+                    button.header-search__submit-button(type="submit").
+                        Найти
+        .header-bottom-line__cell_menu-wrapper
+            ul.top-menu
+                li.top-menu__menu-item
+                    a.top-menu__menu-link(href="#").
+                        Карта проезда
+                li.top-menu__menu-item
+                    a.top-menu__menu-link(href="#").
+                        История заказов
+                li.top-menu__menu-item
+                    a.top-menu__menu-link(href="#").
+                        Корзина

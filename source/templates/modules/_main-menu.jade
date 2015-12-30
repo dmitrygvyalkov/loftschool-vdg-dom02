@@ -1,0 +1,52 @@
+mixin main-menu(activeUrl)
+
+    -
+        var mainMenu = [
+            {
+                link: "#",
+                title: "",
+                text: "Планшеты"
+            },
+            {
+                link: "#mobile",
+                title: "",
+                text: "Мобильные телефоны"
+            },
+            {
+                link: "#",
+                title: "",
+                text: "Mp3 плееры"
+            },
+            {
+                link: "#",
+                title: "",
+                text: "Персоналные компьютеры"
+            },
+            {
+                link: "#",
+                title: "",
+                text: "Ноутбуки"
+            },
+            {
+                link: "#",
+                title: "",
+                text: "Аксессуары"
+            },
+            {
+                link: "#",
+                title: "",
+                text: "Бытовая техника"
+            }
+        ];
+
+
+
+    ul.main-menu
+    each menuItem, index in mainMenu
+        li.main-menu__element
+            if menuItem.link == activeUrl    
+                a.main-menu__link_active(href="#{menuItem.link}" title="#{menuItem.title}").
+                    #{menuItem.text}
+            else
+                a.main-menu__link(href="#{menuItem.link}" title="#{menuItem.title}").
+                    #{menuItem.text}

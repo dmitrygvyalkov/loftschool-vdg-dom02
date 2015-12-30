@@ -1,9 +1,8 @@
-doctype html
-html
-  include modules/_head
-  body
-    <!--[if lt IE 7]>
-    <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
-    <![endif]-->
+extends _layout
 
-    include modules/_scripts
+
+block title
+    Главная интернет магазина
+
+block main-menu
+    +main-menu("#mobile")
